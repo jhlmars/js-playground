@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gugudan1</title>
+</head>
+<body>
+    <h1> 구구단 출력 </h1>
+    <script>
+		function main() {
+            document.write("Main 함수 - 구구단 계산");
+            for(var n=2;n<10;n++) {
+                var result = gugudan(n);
+                printResult(n, result);
+            }
+        }
+        function gugudan(n) {
+            var ret=[];
+            for(var i=1;i<=9;i++) {
+                ret[i] = n * i;
+            }
+            return ret;
+        }	
+        function printResult(n,result) {
+            document.write("<h2>"+n+"단</h2>");
+            for(var i=1;i<=9;i++) {
+                document.write(n+" X "+i+" = "+result[i]+"<br>");
+            }
+        }
+        main();
+    </script>
+</body>
+</html>
